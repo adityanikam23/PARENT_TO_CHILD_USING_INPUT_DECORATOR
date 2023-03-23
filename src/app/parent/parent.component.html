@@ -1,0 +1,33 @@
+<h1>parent component</h1>
+
+<div class="maindiv">
+    <div class="mydiv">
+        <label>first name:</label><br>
+        <input [(ngModel)]="firstname" type="text"  placeholder="enter your first name"><br><br>
+
+        <label>last name:</label><br>
+        <input [(ngModel)]="lastname" type="text"  placeholder="enter your last name"><br><br>
+
+        <label>email address:</label><br>
+        <input [(ngModel)]="email" type="text"  placeholder="enter your email address"><br><br>
+
+        <label>mobile number:</label><br>
+        <input [(ngModel)]="mobnumber" type="text"  placeholder="enter your mobile number" maxlength="10"><br><br>
+
+        <input (click)="clickmetosubmit()" type="button" class="btn" value="submit">
+    </div>
+<!-- 
+    <div>
+        <ul *ngFor="let data of myobject">
+            <li>{{ data.one }}</li>
+            <li>{{ data.two }}</li>
+            <li>{{ data.three }}</li>
+            <li>{{ data.four }}</li>
+        </ul>
+    </div> -->
+</div>
+
+<hr>
+
+
+<app-child [information]="information"></app-child>
